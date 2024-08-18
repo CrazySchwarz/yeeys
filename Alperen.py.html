@@ -1,0 +1,18 @@
+
+import random
+
+def crash_game(bet_amount, multiplier):
+    crash_point = random.uniform(1, 10)  # Rastgele bir çarpan seçimi (örneğin 1.0 ile 10.0 arasında)
+    print(f"Crash çarpanı: {crash_point:.2f}")
+
+    if crash_point >= multiplier:
+        payout = bet_amount * multiplier
+        print(f"Tebrikler! Kazandınız. {payout:.2f} kadar ödeme alacaksınız.")
+    else:
+        print("Üzgünüz, kaybettiniz.")
+
+# Oyuncudan bahis miktarını ve çarpanı girmesini isteyebilirsiniz.
+bet_amount = float(input("Bahis miktarını girin: "))
+multiplier = float(input("Çarpanı girin: "))
+
+crash_game(bet_amount, multiplier)
